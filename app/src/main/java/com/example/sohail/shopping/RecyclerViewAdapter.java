@@ -43,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder recyclerViewHolder,final int i) {
 
-        Picasso.get().load(imagepath[i]).into(recyclerViewHolder.photoView);
+        Picasso.get().load(imagepath[i]).into(recyclerViewHolder.imageview);
         recyclerViewHolder.ProductPrice.setText(String.valueOf(productprice[i]));
         recyclerViewHolder.ProductName.setText(productname[i]);
         recyclerViewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
@@ -72,12 +72,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder{
         private LinearLayout linearLayout;
-        private PhotoView photoView;
+        private ImageView imageview;
         private TextView ProductName,ProductPrice;
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
             linearLayout = itemView.findViewById(R.id.parent_layout);
-            photoView = itemView.findViewById(R.id.image_view);
+            imageview = itemView.findViewById(R.id.image_view);
             ProductName = itemView.findViewById(R.id.product_name);
             ProductPrice = itemView.findViewById(R.id.product_price);
         }
