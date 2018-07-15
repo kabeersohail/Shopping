@@ -13,7 +13,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.hold1.pagertabsindicator.PagerTabsIndicator;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,6 @@ public class Details1 extends AppCompatActivity {
     ViewPager viewPager;
     PagerTabsIndicator pagerTabsIndicator;
     List<Model> models = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +39,9 @@ public class Details1 extends AppCompatActivity {
                     String url = child.getValue().toString();
                     model = new Model("Page",R.drawable.background,url);
                     models.add(model);
+
+
+
                 }
                 viewPager = findViewById(R.id.ViewPager);
                 pagerTabsIndicator = findViewById(R.id.tabsIndicator);

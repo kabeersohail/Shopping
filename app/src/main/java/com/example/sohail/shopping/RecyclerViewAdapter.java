@@ -78,6 +78,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
             linearLayout = itemView.findViewById(R.id.parent_layout);
             imageview = itemView.findViewById(R.id.image_view);
+            imageview.setSelected(true);
             ProductName = itemView.findViewById(R.id.product_name);
             ProductPrice = itemView.findViewById(R.id.product_price);
         }

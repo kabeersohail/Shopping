@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Details" />
-        <activity android:name=".RecyclerActivity" />
-        <activity android:name=".Details1"></activity>
+        <activity android:name=".RecyclerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Details1"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>

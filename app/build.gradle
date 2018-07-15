@@ -54,7 +54,9 @@ dependencies {
     implementation 'com.github.chrisbanes:PhotoView:2.1.4'
     //Tab layout
     implementation 'com.hold1:pagertabindicator:1.0.7'
-
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
 }
 apply plugin: 'com.google.gms.google-services'

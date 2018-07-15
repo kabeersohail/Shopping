@@ -13,16 +13,17 @@ import android.widget.TextView;
 import com.example.sohail.shopping.Model.Model;
 import com.example.sohail.shopping.R;
 import com.github.chrisbanes.photoview.PhotoView;
+import com.hold1.pagertabsindicator.PagerTabsIndicator;
 import com.hold1.pagertabsindicator.TabViewProvider;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvider.ImageProvider{
+public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvider.ImageProvider {
 
     List<Model> models;
     Context context;
-
+    PagerTabsIndicator pagerTabsIndicator;
     public CustomViewPagerAdapter(List<Model> models, Context context) {
         this.models = models;
         this.context = context;
@@ -67,6 +68,7 @@ public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvi
 
     @Override
     public Uri getImageUri(int i) {
+        Uri uri = Uri.parse(models.get(i).getUrl());
         return null;
     }
 
